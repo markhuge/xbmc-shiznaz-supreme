@@ -30,7 +30,7 @@ xbmc.submit "GUI.ShowNotification",
     console.log response
 ```
 
-### notify(* title, msg image *)
+### notify( *title, msg image* )
 
 Send a popup notification to your XBMC
 
