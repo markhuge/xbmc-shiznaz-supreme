@@ -4,8 +4,6 @@ xbmc-shiznaz-supreme
 
 I wanted a lightweight wrapper to help some of my stuff talk to some of my other stuff. This isn't a fully featured XBMC API wrapper. I'm just adding things as I need them.
 
-##*NOTE*: This uses v6 of the API, which only works with Frodo and above.
-
 ## Methods
 
 ### submit( *method, params, callback* )
