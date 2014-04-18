@@ -45,7 +45,7 @@ XBMC = require 'xbmc-shiznaz-supreme'
 xbmc = new XBMC
   uri: 'http://my-xbmc.local:8080'
 
-xbmc.notify "such notification", "TERROR ALERT", "http://assets.markhuge.com/images/doge.jpeg"
+xbmc.notify "TERROR ALERT", "such notification", "http://assets.markhuge.com/images/doge.jpeg"
 ```
 
 ![notification](http://assets.markhuge.com/images/projects/xbmc-shiznaz-supreme/notification.png)
