@@ -47,3 +47,19 @@ xbmc.notify "TERROR ALERT", "such notification", "http://assets.markhuge.com/ima
 ```
 
 ![notification](http://assets.markhuge.com/images/projects/xbmc-shiznaz-supreme/notification.png)
+
+### stop( *playerid* )
+
+Stop XBMC from playing
+
+- playerid - optional player ID
+
+example:
+
+```Coffeescript
+XBMC = require 'xbmc-shiznaz-supreme'
+xbmc = new XBMC
+  uri: 'http://my-xbmc.local:8080'
+
+xbmc.stop()
+```

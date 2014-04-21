@@ -23,5 +23,9 @@ class XBMC
       message: msg
       image: image
 
+  stop: (playerID) ->
+    id = playerID || 0
+    @submit "Player.Stop", playerid: id
+
 module.exports = XBMC
 
