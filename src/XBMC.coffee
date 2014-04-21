@@ -27,5 +27,9 @@ class XBMC
     id = playerID || 0
     @submit "Player.Stop", playerid: id
 
+  pause: (playerID) ->
+    id = playerID || 0
+    @submit "Player.PlayPause", playerid: id
+
 module.exports = XBMC
 

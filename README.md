@@ -63,3 +63,22 @@ xbmc = new XBMC
 
 xbmc.stop()
 ```
+
+### pause( *playerid* )
+
+Pause/Resume the current player
+
+- playerid - optional player ID
+
+example:
+
+```Coffeescript
+XBMC = require 'xbmc-shiznaz-supreme'
+xbmc = new XBMC
+  uri: 'http://my-xbmc.local:8080'
+
+xbmc.pause()
+```
+
+
+
