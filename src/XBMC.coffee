@@ -5,7 +5,10 @@ class XBMC
     {@uri} = options
 
   submit: (method, params, callback) ->
-    req = JSON.stringify { "jsonrpc": "2.0", "method": method, "params": params, "id": 1 }
+    if params
+      req = JSON.stringify { "jsonrpc": "2.0", "method": method, "params": params, "id": 1 }
+    else
+      req = JSON.stringify { "jsonrpc": "2.0", "method": method, "id": 1 }
     request
       method: 'post'
       uri: @uri + '/jsonrpc'
