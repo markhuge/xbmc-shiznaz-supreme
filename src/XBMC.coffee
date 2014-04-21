@@ -38,6 +38,13 @@ class XBMC
         {@movies} = res.result
         callback null, @movies
 
+  getTVShows: (callback) ->
+    @submit "VideoLibrary.GetTVShows", null, (err,httpIncomingMsg,res) =>
+      if err then return callback err
+      if res?.result?.tvshows
+        {@tvshows} = res.result
+        callback null, @tvshows
+
 
 module.exports = XBMC
 

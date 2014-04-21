@@ -96,3 +96,21 @@ xbmc = new XBMC
 xbmc.getMovies (err,movies) ->
   console.log "My movies: ", movies
 ```
+
+
+### getTVShows( *callback* )
+
+Get a list of tv shows in your library
+
+- callback - accepts 2 arguments: 
+  - err - error msg 
+  - shows - a list of tv show objects containing a `label` and `tvshowid`
+
+```Coffeescript
+XBMC = require 'xbmc-shiznaz-supreme'
+xbmc = new XBMC
+  uri: 'http://my-xbmc.local:8080'
+
+xbmc.getTVShows (err,shows) ->
+  console.log "My tv shows: ", shows
+```
