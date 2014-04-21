@@ -80,5 +80,19 @@ xbmc = new XBMC
 xbmc.pause()
 ```
 
+### getMovies( *callback* )
 
+Get a list of movies in your library
 
+- callback - accepts 2 arguments: 
+  - err - error msg 
+  - movies - a list of movie objects containing a `label` and `movieid`
+
+```Coffeescript
+XBMC = require 'xbmc-shiznaz-supreme'
+xbmc = new XBMC
+  uri: 'http://my-xbmc.local:8080'
+
+xbmc.getMovies (err,movies) ->
+  console.log "My movies: ", movies
+```

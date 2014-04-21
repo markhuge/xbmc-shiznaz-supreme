@@ -31,5 +31,13 @@ class XBMC
     id = playerID || 0
     @submit "Player.PlayPause", playerid: id
 
+  getMovies: (callback) ->
+    @submit "VideoLibrary.GetMovies", null, (err,httpIncomingMsg,res) =>
+      if err then return callback err
+      if res?.result?.movies
+        {@movies} = res.result
+        callback null, @movies
+
+
 module.exports = XBMC
 
