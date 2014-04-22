@@ -45,6 +45,17 @@ class XBMC
         {@tvshows} = res.result
         callback null, @tvshows
 
+  _search: (list,string) ->
+    list.filter (item) -> item.label.match string
 
+  searchMovies: (query,callback) ->
+    @getMovies (err,movies) =>
+      callback @_search movies, query
+
+  searchTVShows: (query,callback) ->
+    @getTVShows (err,shows) =>
+      callback @_search shows, query
+
+    
 module.exports = XBMC
 

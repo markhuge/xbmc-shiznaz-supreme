@@ -114,3 +114,45 @@ xbmc = new XBMC
 xbmc.getTVShows (err,shows) ->
   console.log "My tv shows: ", shows
 ```
+
+### searchMovies( *query, callback* )
+
+Search for movies in your library.
+
+- query - a search string matching movie titles
+- callback accepts 2 arguments:
+  - err - error msg
+  - movies - a list of matching movies
+
+example:
+
+```Coffeescript
+XBMC = require 'xbmc-shiznaz-supreme'
+xbmc = new XBMC
+  uri: 'http://my-xbmc.local:8080'
+
+xbmc.searchMovies "Indiana Jones", (err, movies) ->
+  console.log "Movies matching Indiana Jones: ", movies
+```
+
+### searchTVShows( *query, callback* )
+
+Search for movies in your library.
+
+- query - a search string matching show titles
+- callback accepts 2 arguments:
+  - err - error msg
+  - shows - a list of matching shows
+
+example:
+
+```Coffeescript
+XBMC = require 'xbmc-shiznaz-supreme'
+xbmc = new XBMC
+  uri: 'http://my-xbmc.local:8080'
+
+xbmc.searchTVShows "Warehouse 13", (err, shows) ->
+  console.log "Shows matching Warehouse 13: ", shows
+```
+
+
