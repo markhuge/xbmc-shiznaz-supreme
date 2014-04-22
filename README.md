@@ -88,6 +88,8 @@ Get a list of movies in your library
   - err - error msg 
   - movies - a list of movie objects containing a `label` and `movieid`
 
+example:
+
 ```Coffeescript
 XBMC = require 'xbmc-shiznaz-supreme'
 xbmc = new XBMC
@@ -105,6 +107,8 @@ Get a list of tv shows in your library
 - callback - accepts 2 arguments: 
   - err - error msg 
   - shows - a list of tv show objects containing a `label` and `tvshowid`
+
+example:
 
 ```Coffeescript
 XBMC = require 'xbmc-shiznaz-supreme'
@@ -154,5 +158,3 @@ xbmc = new XBMC
 xbmc.searchTVShows "Warehouse 13", (err, shows) ->
   console.log "Shows matching Warehouse 13: ", shows
 ```
-
-
