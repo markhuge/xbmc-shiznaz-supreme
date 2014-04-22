@@ -50,11 +50,11 @@ class XBMC
 
   searchMovies: (query,callback) ->
     @getMovies (err,movies) =>
-      callback @_search movies, query
+      callback null, @_search movies, query
 
   searchTVShows: (query,callback) ->
     @getTVShows (err,shows) =>
-      callback @_search shows, query
+      callback null, @_search shows, query
 
     
 module.exports = XBMC
